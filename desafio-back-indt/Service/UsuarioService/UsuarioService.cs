@@ -108,7 +108,7 @@ namespace desafio_back_indt.Service.UsuarioService
             try
             {
                 serviceResponse.Dados = _context.Usuarios.ToList();
-                if(serviceResponse.Dados.Count == 0)
+                if (serviceResponse.Dados.Count == 0)
                 {
                     serviceResponse.Mensagem = "Nenhum Dado Encontrado";
                 }
@@ -127,6 +127,7 @@ namespace desafio_back_indt.Service.UsuarioService
         {
             ServiceResponse<List<UsuarioModel>> serviceResponse = new ServiceResponse<List<UsuarioModel>>();
 
+  
             try
             {
 
@@ -138,12 +139,17 @@ namespace desafio_back_indt.Service.UsuarioService
                     serviceResponse.Mensagem = "Usuário Não Localizado";
                     serviceResponse.Status = false;
                 }
+                else
+                {
+                    usuario.DataDeAtualizacao = DateTime.Now.ToLocalTime();
+                    _context.Usuarios.Update(editadoUsuario);
+                    await _context.SaveChangesAsync();
 
-                usuario.DataDeAtualizacao = DateTime.Now.ToLocalTime();
-                _context.Usuarios.Update(editadoUsuario);
-                await _context.SaveChangesAsync();
+                    serviceResponse.Dados = _context.Usuarios.ToList();
+                    serviceResponse.Mensagem = "Usuário Atualizado Com Sucesso";
+                }
 
-                serviceResponse.Dados = _context.Usuarios.ToList();
+                
             }
             catch (Exception ex)
             {
