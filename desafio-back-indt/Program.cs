@@ -1,4 +1,5 @@
 using desafio_back_indt.DataContext;
+using desafio_back_indt.Models;
 using desafio_back_indt.Service.UsuarioService;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,7 @@ builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
 
 //COMUNICATION ENTRE INTERFACE E SERVICE
 builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
+builder.Services.AddScoped<DataSeeder>();
 
 
 //ESCOLHA ALGUM BANCO PARA MIGRATION ABAIXO 
@@ -38,6 +40,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
+if (args.Length == 1 && args[0].ToLower() == "seeddata")
+    SeedData(app);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -54,3 +59,14 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+void SeedData(IHost app)
+{
+    var scopedFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+    using (var scope = scopedFactory.CreateScope()) 
+    {
+        var service = scope.ServiceProvider.GetService<DataSeeder>();
+        service.Seed();
+    }
+}
