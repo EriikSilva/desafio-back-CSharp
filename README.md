@@ -1,7 +1,7 @@
 #DesafioBackIndt
 
 # 💾 Instalação
-- Necessario DOTNET 7.0 e Sql Managemente Studio
+- Necessario DOTNET 7.0 e SQL Server Management Studio
 - Clonar o projeto ```git clone https://github.com/EriikSilva/desafio-back-indt.git```
 - Entrar na Pasta desafio-back-indt via terminal
 - Rode o comando ```dotnet restore``` para instalar as dependências
