@@ -20,6 +20,33 @@
 
 ### OBS: Não se esqueça de trocar as connectionsStrings como nos videos acima
 
+### SEED: Para rodar o seed abra o cmd e entre na pasta desafio-back-indt e digite o comando ```dotnet run seeddata```
+- IMPORTANTE: so rode o seed após ter feito as migrations
+## CASO PRECISE DE AJUDA SIGA ESSE TUTORIAL DE COMO APLICAR O SEED (Feito para esse projeto especifico) => https://www.youtube.com/watch?v=46sxtqjtDHA
+
+- USUÁRIOS DO SEED:
+- Usuário 1:
+Nome: admin;
+Sobrenome: administrador;
+Email:admin@admin.com;
+Senha: admin123;
+Nivel de acesso: Admin;
+
+- Usuário 2:
+Nome: admin2;
+Sobrenome: administrador2;
+Email:admin2@admin2.com;
+Senha: admin321;
+Nivel de acesso: Admin;
+
+- Usuário 3:
+Nome: John;
+Sobrenome: Doe;
+Email:johndoe@jonhdoe.com;
+Senha: john123;
+Nivel de acesso: Usuário Comum;
+
+
 - endpoint https://localhost:7145/api/Usuario
 - endpont Swagger https://localhost:7145/swagger/index.html
 
