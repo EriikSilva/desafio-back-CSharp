@@ -7,7 +7,7 @@ namespace desafio_back_indt.Service.UsuarioService
     public class UsuarioService : IUsuarioInterface
     {
         private readonly ApplicationDbContext _context;
-        public UsuarioService(ApplicationDbContext context) 
+        public UsuarioService(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -17,7 +17,7 @@ namespace desafio_back_indt.Service.UsuarioService
 
             try
             {
-                if(novoUsuario == null)
+                if (novoUsuario == null)
                 {
                     serviceResponse.Mensagem = "Informar Dados";
                     serviceResponse.Status = false;
@@ -82,7 +82,7 @@ namespace desafio_back_indt.Service.UsuarioService
             {
                 UsuarioModel usuario = _context.Usuarios.FirstOrDefault(x => x.Id == id);
 
-                if(usuario == null)
+                if (usuario == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuário Não Localizado";
@@ -103,7 +103,7 @@ namespace desafio_back_indt.Service.UsuarioService
 
         public async Task<ServiceResponse<List<UsuarioModel>>> GetUsuarios()
         {
-           ServiceResponse<List<UsuarioModel>> serviceResponse = new ServiceResponse<List<UsuarioModel>>();
+            ServiceResponse<List<UsuarioModel>> serviceResponse = new ServiceResponse<List<UsuarioModel>>();
 
             try
             {
@@ -113,21 +113,21 @@ namespace desafio_back_indt.Service.UsuarioService
                     serviceResponse.Mensagem = "Nenhum Dado Encontrado";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-               serviceResponse.Mensagem = ex.Message;
-               serviceResponse.Status = false;
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Status = false;
             }
 
             return serviceResponse;
         }
 
-   
+
         public async Task<ServiceResponse<List<UsuarioModel>>> UpdateUsuario(UsuarioModel editadoUsuario)
         {
             ServiceResponse<List<UsuarioModel>> serviceResponse = new ServiceResponse<List<UsuarioModel>>();
 
-  
+
             try
             {
 
@@ -149,7 +149,7 @@ namespace desafio_back_indt.Service.UsuarioService
                     serviceResponse.Mensagem = "Usuário Atualizado Com Sucesso";
                 }
 
-                
+
             }
             catch (Exception ex)
             {
@@ -159,5 +159,44 @@ namespace desafio_back_indt.Service.UsuarioService
 
             return serviceResponse;
         }
-    }
+
+        public async Task<ServiceResponse<UsuarioModel>> Login(string email, string senha)
+        {
+
+            ServiceResponse<UsuarioModel> serviceResponse = new ServiceResponse<UsuarioModel>();
+
+            try
+            {
+       
+                var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
+
+                if (usuario == null)
+                {
+                    serviceResponse.Mensagem = "Usuário não encontrado";
+                    serviceResponse.Status = false;
+                    return serviceResponse;
+                }
+
+
+                if (usuario.Senha != senha)
+                {
+                    serviceResponse.Mensagem = "Senha incorreta";
+                    serviceResponse.Status = false;
+                    return serviceResponse;
+                }
+              
+
+                serviceResponse.Dados = usuario;
+                serviceResponse.Mensagem = "Login bem-sucedido";
+                serviceResponse.Status = true;
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Status = false;
+            }
+
+            return serviceResponse;
+        }
+    }     
 }

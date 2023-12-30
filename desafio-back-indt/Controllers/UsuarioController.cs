@@ -10,6 +10,7 @@ namespace desafio_back_indt.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioInterface _usuarioInterface;
+  
         public UsuarioController(IUsuarioInterface usuarioInterface)
         {
             _usuarioInterface = usuarioInterface;
@@ -49,5 +50,27 @@ namespace desafio_back_indt.Controllers
             return Ok(serviceResponse);
 
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        {
+            try
+            {
+                ServiceResponse<UsuarioModel> serviceResponse = await _usuarioInterface.Login(model.Email, model.Senha);
+
+                if (!serviceResponse.Status)
+                {
+                    return Unauthorized(new { Message = serviceResponse.Mensagem });
+                }
+
+                return Ok(new { Message = serviceResponse.Mensagem, User = serviceResponse.Dados });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Erro interno do servidor" });
+            }
+        }
+
+
     }
 }

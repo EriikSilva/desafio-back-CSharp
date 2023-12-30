@@ -12,6 +12,8 @@ namespace desafio_back_indt.Service.UsuarioService
 
         Task<ServiceResponse<List<UsuarioModel>>> DeleteUsuario(int id);
 
+        Task<ServiceResponse<UsuarioModel>> Login(string username, string senha);
+
         //Task<ServiceResponse<List<UsuarioModel>>> InativaUsuario(int id);
     }
 }
