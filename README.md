@@ -19,3 +19,15 @@
 
 - endpoint https://localhost:7145/api/Usuario
 - endpont Swagger https://localhost:7145/swagger/index.html
+
+# 🐱‍👤 ROTAS
+- USUARIO
+  - POST => /api/Usuario
+  - PUT => /api/Usuario
+  - POST => /api/Usuario
+  - GET => /api/Usuario
+  - GET => /api/Usuario/{id}
+ 
+- Login
+  - /api/Usuario/login
+  
