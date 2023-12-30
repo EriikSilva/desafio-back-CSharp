@@ -18,6 +18,7 @@
 - Caso opte por POSTGRESQL comente o service do SQLSERVER e siga as instruções do video que esta no link abaixo
 ###  👨‍💻 POSTGRES Server Migration Tutorial => https://www.youtube.com/watch?v=9fiKmd9mGzc&feature=youtu.be
 
+### OBS: Não se esqueça de trocar as connectionsStrings como nos videos acima
 
 - endpoint https://localhost:7145/api/Usuario
 - endpont Swagger https://localhost:7145/swagger/index.html
