@@ -20,10 +20,20 @@ builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
 //COMUNICATION ENTRE INTERFACE E SERVICE
 builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
 
+
+//ESCOLHA ALGUM BANCO PARA MIGRATION ABAIXO 
+
+//SQLSERVER
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+//POSTGRES
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//{
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultPgConnection"));
+//});
 
 
 var app = builder.Build();
