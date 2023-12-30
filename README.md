@@ -2,7 +2,7 @@
 
 # 💾 Instalação
 - Necessario DOTNET 7.0 (ASP.NET API)  Visual Studio Community 2022 e SQL Server Management Studio ou Postgresql
-
+- Para esse projeto utilizei o modelo chamado repository pattern quem utliza Interfaces e deixa a responsabilidade da requisição para o service
 
   🚀 PARA CLONAR O PROJETO NO VISUAL STUDIO COMMUNITY SIGA AS INTRUÇÕES DO LINK ABAIXO 
   ## 🎨 TUTORIAL => https://www.youtube.com/watch?v=NsxJL49WrWU
