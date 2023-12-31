@@ -96,7 +96,7 @@ Caso precise de ajuda, siga o tutorial abaixo feito pelo autor do projeto para o
 
 - endpoint: https://localhost:7145/api/Usuario
 - endpont Swagger: https://localhost:7145/swagger/index.html
-- 
+
 ## 🐱‍👤 ROTAS
 - Usuário
   - POST => /api/Usuario
