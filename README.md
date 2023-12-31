@@ -1,4 +1,14 @@
 # DesafioBackIndt
+## 📌 Índice
+[Sobre](#-sobre) <br>
+[Instação](#-instalação) <br>
+ㅤ[Migration Tutorial](#%EF%B8%8F-migration-tutorial-feito-para-esse-projeto) <br>
+ㅤ[Seed Tutorial](#-seed-tutorial) <br>
+[Rotas](#-rotas) <br>
+[Instação no Visual Studio Code](#caso-opte-pelo-visual-studio-code) <br>
+[Autor](#autor)
+
+## 📰 Sobre
 Este projeto, denominado DesafioBackIndt, é uma implementação que utiliza o padrão Repository  Pattern, delegando a responsabilidade das requisições para o service. Trata-se de uma aplicação que envolve um CRUD de usuários e sistema de login.
 
 O sistema utiliza o ASP.NET API com o DOTNET 7.0 e é desenvolvido no Visual Studio 2022. A gestão de dados é realizada através do SQL Server Management Studio ou do PostgreSQL, proporcionando flexibilidade na escolha do banco de dados.
@@ -7,13 +17,7 @@ O processo de inicialização do projeto é facilitado pelo tutorial disponibili
 
 Em resumo, o DesafioBackIndt oferece uma estrutura robusta para a gestão de usuários, com endpoints claros para operações de CRUD, tornando-se uma base sólida para o desenvolvimento de sistemas que envolvam a manipulação de dados de usuários.
 
-## 📌 Índice
-[Instação](#-instalação) <br>
-ㅤ[Migration Tutorial](#%EF%B8%8F-migration-tutorial-feito-para-esse-projeto) <br>
-ㅤ[Seed Tutorial](#-seed-tutorial) <br>
-[Rotas](#-rotas) <br>
-[Instação no Visual Studio Code](#caso-opte-pelo-visual-studio-code) <br>
-[Autor](#autor)
+
 
 ## 💾 Instalação
 - Necessário DOTNET 7.0 (ASP.NET API)
@@ -22,7 +26,7 @@ Em resumo, o DesafioBackIndt oferece uma estrutura robusta para a gestão de usu
 - Para clonar o projeto no Visual Studio Community siga o tutorial gravado pelo autor [Tutorial para clonar o projeto](https://www.youtube.com/watch?v=NsxJL49WrWU)
 
 
-### 🧗‍♂️ Migration Tutorial (Feito para esse projeto)
+### 🔄 Migration Tutorial (Feito para esse projeto)
 Após instalar as dependências, escolha entre SQLSERVER ou POSTGRESQL para a migração. Comente o serviço não escolhido. Abaixo, um exemplo para SQLSERVER:
 <img src="https://github.com/EriikSilva/desafio-back-indt/assets/61124602/4ccf3f0c-fb3d-49e5-ad6a-7dea409891c9">
 
@@ -92,7 +96,7 @@ Caso precise de ajuda, siga o tutorial abaixo feito pelo autor do projeto para o
 
 - endpoint: https://localhost:7145/api/Usuario
 - endpont Swagger: https://localhost:7145/swagger/index.html
-
+- 
 ## 🐱‍👤 ROTAS
 - Usuário
   - POST => /api/Usuario
@@ -100,11 +104,8 @@ Caso precise de ajuda, siga o tutorial abaixo feito pelo autor do projeto para o
   - POST => /api/Usuario
   - GET => /api/Usuario
   - GET => /api/Usuario/{id}
- 
 - Login
   - /api/Usuario/login
-<hr>
-<br>
 
 ## Caso opte pelo Visual Studio Code
 - Clonar o projeto ```git clone https://github.com/EriikSilva/desafio-back-indt.git```
