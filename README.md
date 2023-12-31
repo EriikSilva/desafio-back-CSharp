@@ -7,8 +7,13 @@ O processo de inicialização do projeto é facilitado pelo tutorial disponibili
 
 Em resumo, o DesafioBackIndt oferece uma estrutura robusta para a gestão de usuários, com endpoints claros para operações de CRUD, tornando-se uma base sólida para o desenvolvimento de sistemas que envolvam a manipulação de dados de usuários.
 
-# 📌 Índice
-[]()
+## 📌 Índice
+[Instação](#-instalação) <br>
+ㅤ[Migration Tutorial](#%EF%B8%8F-migration-tutorial-feito-para-esse-projeto) <br>
+ㅤ[Seed Tutorial](#-seed-tutorial) <br>
+[Rotas](#-rotas) <br>
+[Instação no Visual Studio Code](#caso-opte-pelo-visual-studio-code) <br>
+[Autor](#autor)
 
 ## 💾 Instalação
 - Necessário DOTNET 7.0 (ASP.NET API)
