@@ -2,7 +2,7 @@
 ## 📌 Índice
 [Sobre](#-sobre) <br>
 [Instação](#-instalação) <br>
-ㅤ[Migration Tutorial](#%EF%B8%8F-migration-tutorial-feito-para-esse-projeto) <br>
+ㅤ[Migration Tutorial](#-migration-tutorial-feito-para-esse-projeto) <br>
 ㅤ[Seed Tutorial](#-seed-tutorial) <br>
 [Rotas](#-rotas) <br>
 [Instação no Visual Studio Code](#caso-opte-pelo-visual-studio-code) <br>
