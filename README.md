@@ -1,7 +1,7 @@
-# DesafioBackIndt
+# Desafio Backend C#
 ## 📌 Índice
 [Sobre](#-sobre) <br>
-[Instação](#-instalação) <br>
+[Instalação](#-instalação) <br>
 ㅤ[Migration Tutorial](#-migration-tutorial-feito-para-esse-projeto) <br>
 ㅤ[Seed Tutorial](#-seed-tutorial) <br>
 [Rotas](#-rotas) <br>
@@ -9,13 +9,13 @@
 [Autor](#autor)
 
 ## 📰 Sobre
-Este projeto, denominado DesafioBackIndt, é uma implementação que utiliza o padrão Repository  Pattern, delegando a responsabilidade das requisições para o service. Trata-se de uma aplicação que envolve um CRUD de usuários e sistema de login.
+Este projeto, denominado Desafio Backend C#, é uma implementação que utiliza o padrão Repository  Pattern, delegando a responsabilidade das requisições para o service. Trata-se de uma aplicação que envolve um CRUD de usuários e sistema de login.
 
 O sistema utiliza o ASP.NET API com o DOTNET 7.0 e é desenvolvido no Visual Studio 2022. A gestão de dados é realizada através do SQL Server Management Studio ou do PostgreSQL, proporcionando flexibilidade na escolha do banco de dados.
 
 O processo de inicialização do projeto é facilitado pelo tutorial disponibilizado pelo autor, permitindo a rápida clonagem e configuração no Visual Studio Community. Além disso, o projeto inclui instruções detalhadas para migração e seeding de dados, garantindo uma configuração completa e funcional do ambiente.
 
-Em resumo, o DesafioBackIndt oferece uma estrutura robusta para a gestão de usuários, com endpoints claros para operações de CRUD, tornando-se uma base sólida para o desenvolvimento de sistemas que envolvam a manipulação de dados de usuários.
+Em resumo, o Desafio Backend C# oferece uma estrutura robusta para a gestão de usuários, com endpoints claros para operações de CRUD, tornando-se uma base sólida para o desenvolvimento de sistemas que envolvam a manipulação de dados de usuários.
 
 
 
@@ -108,7 +108,7 @@ Caso precise de ajuda, siga o tutorial abaixo feito pelo autor do projeto para o
   - /api/Usuario/login
 
 ## Caso opte pelo Visual Studio Code
-- Clonar o projeto ```git clone https://github.com/EriikSilva/desafio-back-indt.git```
+- Clonar o projeto ```git clone https://github.com/EriikSilva/desafio-back-CSharp.git```
 - Entrar na Pasta desafio-back-indt via terminal
 - Rode o comando ```dotnet restore``` para instalar as dependências
 - Rode o comando ```dotnet add package Microsoft.EntityFrameworkCore.Tools --version 6.0.0``` para instalar o EntityFramework
